@@ -1,0 +1,84 @@
+//
+// Bakka.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+#include "VersionNo.h"
+#include "Version.h"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION VERSION_FILE
+ PRODUCTVERSION VERSION_PRODUCT
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Sang-Kil Park"
+			VALUE "FileDescription", "http://code.google.com/p/hosts-bakka"
+            VALUE "FileVersion", VERSION_FILESTR
+            VALUE "InternalName", "Bakka.exe"
+            VALUE "LegalCopyright", "Copyright (c) 2009 Sang-Kil Park Some rights reserved."
+            VALUE "OriginalFilename", "Bakka.exe"
+            VALUE "ProductName", "Bakka"
+            VALUE "ProductVersion", VERSION_PRODUCTSTR
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// About Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Bakka"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
+    LTEXT           VERSION_CAPTION,IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright 2009 Sang-Kil Park Some rights reserved.",IDC_STATIC,40,24,188,8
+    DEFPUSHBUTTON   "OK",IDOK,178,4,50,16,WS_GROUP
+    LTEXT           "If you have any questions, please do not hesitate to contact me - skpark@daumcorp.com",IDC_STATIC,40,36,188,17
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_POPUP_MENU MENU 
+BEGIN
+    POPUP "POPUP_MENU"
+    BEGIN
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+END
